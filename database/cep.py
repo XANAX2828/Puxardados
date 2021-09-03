@@ -35,6 +35,7 @@ def consultar():
             restart = str(input(
                 f'{Ired}==> CEP não encontrado <== \n\n\n{Hcyan}Deseja realizar outra consulta S/N?{VRCRM} ')).strip().upper()[
                 0]
+            os.system('clear')
         else:
             print('\n\033[1;33m{:-^62}'.format(f' {Dgreen}==> CEP ENCONTRADO <=={Nyellow} '))
             print(f'\nCEP             >>> {rjson["cep"]}')
@@ -50,3 +51,4 @@ def consultar():
             restart = str(input(
                 f'\n{Hcyan}Deseja realizar outra consulta S/N?{VRCRM} ')).strip().upper()[
                 0]
+            os.system('clear')
