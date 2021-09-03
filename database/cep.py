@@ -16,8 +16,7 @@ import requests
 
 
 def clear():
-    os.system('cls')
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 clear()
