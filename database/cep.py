@@ -14,9 +14,17 @@ VRCRM = '\033[0;0m'     # Remover
 import os
 import requests
 
-os.system('clear')
+
+def clear():
+    os.system('cls')
+    os.system('clear')
+
+
+clear()
+
 
 def consultar():
+    clear()
     print('')
     print(f'\n{Iblue}########## #################### ##########')
     print('########## ### Consulta CEP ### ##########')
@@ -33,9 +41,8 @@ def consultar():
         rjson = request.json()
         if 'erro' in rjson:
             restart = str(input(
-                f'{Ired}==> CEP não encontrado <== \n\n\n{Hcyan}Deseja realizar outra consulta S/N?{VRCRM} ')).strip().upper()[
-                0]
-            os.system('clear')
+                f'{Ired}==> CEP NÃO ENCONTRADO <== \n\n\n{Hcyan}Deseja realizar outra consulta S/N?{VRCRM} ')).strip().upper()[0]
+            clear()
         else:
             print('\n\033[1;33m{:-^62}'.format(f' {Dgreen}==> CEP ENCONTRADO <=={Nyellow} '))
             print(f'\nCEP             >>> {rjson["cep"]}')
@@ -51,4 +58,4 @@ def consultar():
             restart = str(input(
                 f'\n{Hcyan}Deseja realizar outra consulta S/N?{VRCRM} ')).strip().upper()[
                 0]
-            os.system('clear')
+            clear()
