@@ -16,7 +16,7 @@ import requests
 
 os.system('clear')
 
-def cep():
+def consultar():
     print('')
     print(f'\n{Iblue}########## #################### ##########')
     print('########## ### Consulta CEP ### ##########')
