@@ -49,6 +49,7 @@ try:
     from database import covid19
     from database import ip
     from database import placa
+    from database import opc
 except Exception as error:
     print(f'{Twhite}{Ired}[*]{Twhite} Erro: ' + error)
     exit()
