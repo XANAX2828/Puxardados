@@ -85,7 +85,7 @@ while (Sair == False):
 >>> CONSULTAR IP
 >>> MOSTRAR MEU IP
 >>> CONSULTA PLACA
->>> CONSULTAR CPF 
+>>> CONSULTAR CPF [{Ired}OFF{VRCRM}] 
 >>> COVID19
 >>> WHATSAPP
 >>> Atualizar
