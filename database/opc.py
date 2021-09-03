@@ -17,7 +17,7 @@ VRCRM = '\033[0;0m'     # Remover
 error = f'{Twhite}[{Ired}ERROR{Twhite}]';
 warning = f'{Twhite}[{Nyellow}!{Twhite}]';
 info = f'{Twhite}[{Dgreen}i{Twhite}]'
-result = os.popen('figlet MID').read()
+result = os.popen('figlet MID-PAINEL').read()
 
 
 def clear():
