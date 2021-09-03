@@ -54,7 +54,7 @@ except Exception as error:
     print(f'{Twhite}{Ired}[*]{Twhite} Erro: ' + error)
     exit()
 
-requests = requests.Session();result = os.popen('figlet MID').read()
+requests = requests.Session();result = os.popen('figlet MID-PAINEL').read()
 
 try:
     if __name__ == '__main__':
