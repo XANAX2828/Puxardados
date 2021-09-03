@@ -108,7 +108,7 @@ while (Sair == False):
     elif op == 6:
         covid19.consultar()  # nCOVID19
     elif op == 7:
-        os.system('termux-open-url https://chat.whatsapp.com/FK4bA2lsbzo1NGFnpwVmmN')
+        os.system('termux-open-url https://wa.me/5512988789266')
     elif op == 8:  # Atualizar painel
         os.popen('cd data && bash update.sh');
         opc.dialog('Reiniciando o painel...');
