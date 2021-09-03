@@ -53,7 +53,7 @@ def consultar():
             print(f'Casos            >>> {rjson["cases"]}')
             print(f'Mortes           >>> {rjson["deaths"]}')
             print(f'Suspeitas        >>> {rjson["suspects"]}')
-            print(f'Recuperados      >>> {rjson["refuses"]}')
+            print(f'Recusados        >>> {rjson["refuses"]}')
             print(f'Data de consulta >>> {rjson["datetime"]}')
             print('')
             print(f'\033[1;33m-' * 48)
