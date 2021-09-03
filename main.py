@@ -81,15 +81,15 @@ except:
 Sair = False
 while (Sair == False):
     try:
-        op = int(opc.menu(f'''
-        1  >>> BUSCADOR DE CEP
-        2  >>> CONSULTAR IP
-        3  >>> MOSTRAR MEU IP
-        4  >>> CONSULTA PLACA
-        5  >>> CONSULTAR CPF [{Ired}OFF{VRCRM}]
-        6  >>> COVID19
-        99 >>> Atualizar
-        00 >>> Sair'''))
+        op = int(opc.menu(f'''>>> BUSCADOR DE CEP
+>>> CONSULTAR IP
+>>> MOSTRAR MEU IP
+>>> CONSULTA PLACA
+>>> CONSULTAR CPF 
+>>> COVID19
+>>> WHATSAPP
+>>> Atualizar
+>>> Sair'''))
     except:
         opc.error_dialog('Caracteres não reconhecidos');
         op = None
@@ -107,11 +107,13 @@ while (Sair == False):
         # cpf.consultar()
     elif op == 6:
         covid19.consultar()  # nCOVID19
-    elif op == 99:  # Atualizar painel
+    elif op == 7:
+        os.system('termux-open-url https://chat.whatsapp.com/FK4bA2lsbzo1NGFnpwVmmN')
+    elif op == 8:  # Atualizar painel
         os.popen('cd data && bash update.sh');
         opc.dialog('Reiniciando o painel...');
         opc.restart()
-    elif op == 00:
+    elif op == 9:
         Sair = True
     elif op == None:
         pass
