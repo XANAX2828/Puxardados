@@ -25,10 +25,6 @@ clear()
 def consultar():
     clear()
     print('')
-    print(f'\n{Iblue}########## #################### ##########')
-    print('######## ### Consulta Covid19 ### ########')
-    print('########## #################### ##########')
-
     restart = 'S'
     while restart == 'S':
         print(f'\n{Iblue}########## #################### ##########')
