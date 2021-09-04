@@ -25,11 +25,11 @@ clear()
 def consultar():
     clear()
     print('')
+    print(f'\n{Iblue}########## #################### ##########')
+    print('######## ### Consulta Covid19 ### ########')
+    print('########## #################### ##########')
     restart = 'S'
     while restart == 'S':
-        print(f'\n{Iblue}########## #################### ##########')
-        print('######## ### Consulta Covid19 ### ########')
-        print('########## #################### ##########')
         while True:
             covid_input = str(input(f'\n{Hcyan}Digite o UF para consulta (Ex: "SP"/"RJ"): ').strip().lower())
             if len(covid_input) != 2:
