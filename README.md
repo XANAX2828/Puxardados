@@ -4,7 +4,7 @@
 
 <p align="center" ><img alt="MidPainel" src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png"></p>
 
-<h1 align="center">Kiny-Painel (BETA)</h1>
+<h1 align="center">Mid-Painel (BETA)</h1>
 
   <p align="center">
     Este painel de consulta tem o objetivo de retornar dados pessoais através do Nome, Número ou CPF. De forma que não precise pagar por isso.
