@@ -1,8 +1,6 @@
 <p>
-"<img src="https://i.ibb.co/Y73M72Z/README-ASCII.png" alt="README-ASCII" border="0">
+"<p align="center" ><img src="https://i.ibb.co/Y73M72Z/README-ASCII.png" alt="README-ASCII" border="0">
 </p>
-
-<p align="center" ><img alt="MidPainel" src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png"></p>
 
 <h1 align="center">Mid-Painel (BETA)</h1>
 
