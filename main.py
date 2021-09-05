@@ -14,14 +14,19 @@ VRCRM = '\033[0;0m'     # Remover
 import os
 import requests
 
+error = f'{Twhite}[{Ired}ERROR{Twhite}]';
+warning = f'{Twhite}[{Nyellow}!{Twhite}]';
+info = f'{Twhite}[{Dgreen}i{Twhite}]'
+result = os.popen('figlet MID-PAINEL').read()
+
+
 os.system('clear')
 
-print(f'Painel de Consultas simples by Dr Midnight')
+print(f'Painel de Consultas básicas by Dr Midnight')
 
 
 def clear():
-    os.system('cls')
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
 def restart():
     python = sys.executable
     os.execl(python, python, *sys.argv)
@@ -31,7 +36,7 @@ try:
     import requests, random, json, phonenumbers
 except:
     install = input(
-        f'{Twhite}{Dgreen}[i]{Twhite} Vejo que é sua primeira vez aqui,'
+        f'{Twhite}{Dgreen}[i]{Twhite} Ola! Vejo que esta é sua primeira vez aqui...'
         f'\nDeseja instalar o software necessário?\n1-Sim\n2-Não\n_').strip().upper()[0]
     if install == 'S' or install == '1':
         os.system("apt install figlet -y")
@@ -39,7 +44,7 @@ except:
         os.system('pip3 install requests pytube phonenumbers')
         clear()
     else:
-        print(f'Tente realizar a instalação manual... Adeus');
+        print(f'Ok... Tente realizar a instalação manual ou Adeus');
         exit()
     restart()
 
@@ -49,28 +54,60 @@ try:
     from database import covid19
     from database import ip
     from database import placa
-    from database import opc
+    from database import banner
+    from database import root
 except Exception as error:
     print(f'{Twhite}{Ired}[*]{Twhite} Erro: ' + error)
     exit()
+
+def dialog(text='', tiled='='):
+    clear();
+    print(os.popen('figlet MID-PAINEL').read())
+    text = text.split('\n')
+    maior = 0
+    for txt in text:
+        tamanho = len(txt)
+        if tamanho > maior:
+            maior = tamanho
+    print(str(Twhite) + str(Dgreen) + tiled + tiled + tiled * maior + tiled + tiled + str(Twhite))
+    for txt in text:
+        print(str(warning) + ' ' + txt)
+    print(str(Twhite) + str(Dgreen) + tiled + tiled + tiled * maior + tiled + tiled + str(Twhite))
+    time.sleep(3)
+
+def error_dialog(text='', tiled='='):
+    clear();
+    print(os.popen('figlet MID-PAINEL').read())
+    text = text.split('\n')
+    maior = 0
+    for txt in text:
+        tamanho = len(txt)
+        if tamanho > maior:
+            maior = tamanho
+    print(str(Twhite) + str(Ired) + tiled * 8 + tiled * maior + tiled * 8 + str(Twhite))
+    for txt in text:
+        print(str(error) + ' ' + txt + ' ' + str(error))
+    print(str(Twhite) + str(Ired) + tiled * 8 + tiled * maior + tiled * 8 + str(Twhite))
+    time.sleep(3)
+
 
 requests = requests.Session();result = os.popen('figlet MID-PAINEL').read()
 
 try:
     if __name__ == '__main__':
-        opc.dialog('Buscando atualizações ...')
+        dialog('Buscando atualizações ...')
         update = subprocess.check_output('git pull', shell=True)
         if 'Already up to date' not in update.decode():
-            opc.dialog('Atualização instalada.\nReiniciando o painel.')
+            dialog('Atualização instalada.\nReiniciando o painel.')
             restart()
         else:
-            print(f'{Twhite}[{Nyellow}i{Twhite}] Nenhuma atualizacao disponivel.')
+            print(f'{Twhite}[{Nyellow}i{Twhite}] Nenhuma atualização disponivel.')
             time.sleep(2)
 except:
     if os.path.exists('.git'):
         pass
     else:
-        opc.error_dialog('Falta de repositório GIT local')
+        error_dialog('Falta de repositório GIT local')
 
 try:
     subprocess.check_output('apt update -y', shell=True)
@@ -79,43 +116,40 @@ except:
     os.system("pacman -Sy figlet curl")
 
 Sair = False
-while (Sair == False):
+while Sair == False:
     try:
-        op = int(opc.menu(f'''>>> BUSCADOR DE CEP
->>> CONSULTAR IP
->>> MOSTRAR MEU IP
->>> CONSULTA PLACA
->>> CONSULTAR CPF [{Ired}OFF{VRCRM}] 
->>> COVID19
->>> WHATSAPP
->>> Atualizar
->>> Sair'''))
+        banner.menu()
+        opc = int(input('Digite o numero da opção que deseja.'))
     except:
-        opc.error_dialog('Caracteres não reconhecidos');
+        error_dialog('Caracteres não reconhecidos');
         op = None
-    opc.clear()
+    clear()
 
-    if op == 1:
+    if opc == 1:     # CEP
         cep.consultar()
-    elif op == 2:
-        ip.consultar()
-    elif op == 3:
-        ip.consultar('25d800a8b8e8b99d77c809567aa291b8', 1)  # mostrar IP
-    elif op == 4:
-        placa.consultar()
-    # elif op == 5:
+    # elif opc == 2:
         # cpf.consultar()
-    elif op == 6:
-        covid19.consultar()  # nCOVID19
-    elif op == 7:
-        os.system('termux-open-url https://wa.me/5512988789266')
-    elif op == 8:  # Atualizar painel
+    elif opc == 3:   # IP
+        ip.consultar()
+    elif opc == 4:   # Placa
+        placa.consultar()
+    elif opc == 5:   # Meu IP
+        ip.consultar('25d800a8b8e8b99d77c809567aa291b8', 1)  # mostrar IP
+    elif opc == 6:   # Covid Info
+        covid19.consultar()
+    elif opc == 7:   # Root Checker
+        root.consultar()
+    elif opc == 8:   # Atualizar painel
         os.popen('cd data && bash update.sh');
-        opc.dialog('Reiniciando o painel...');
-        opc.restart()
-    elif op == 9:
+        dialog('Reiniciando o painel...');
+        restart()
+    elif opc == 9:   # Sair
         Sair = True
-    elif op == None:
+    elif opc == 10:  # Criador
+        os.system('termux-open-url https://wa.me/5512988789266')
+    elif opc == 11:  # Grupo
+        os.system('termux-open-url https://discord.gg/kgXhZzGJDY')
+    elif opc == None:
         pass
     else:
-        opc.error_dialog('Opção incorreta')
+        error_dialog('Opção incorreta')
