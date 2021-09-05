@@ -41,7 +41,7 @@ except:
     if install == 'S' or install == '1':
         os.system("apt install figlet -y")
         os.system('python3 -m pip install --upgrade pip')
-        os.system('pip3 install requests pytube phonenumbers')
+        os.system('pip3 install requests pytube phonenumbers netifaces')
         clear()
     else:
         print(f'Ok... Tente realizar a instalação manual ou Adeus');
@@ -50,12 +50,7 @@ except:
 
 
 try:
-    from database import cep
-    from database import covid19
-    from database import ip
-    from database import placa
-    from database import banner
-    from database import root
+    from database import cep, covid19, ip, placa, banner, root, meuip
 except Exception as error:
     print(f'{Twhite}{Ired}[*]{Twhite} Erro: ' + error)
     exit()
@@ -134,7 +129,7 @@ while Sair == False:
     elif opc == 4:   # Placa
         placa.consultar()
     elif opc == 5:   # Meu IP
-        ip.consultar('25d800a8b8e8b99d77c809567aa291b8', 1)  # mostrar IP
+        meuip.consultar()
     elif opc == 6:   # Covid Info
         covid19.consultar()
     elif opc == 7:   # Root Checker
