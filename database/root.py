@@ -12,7 +12,7 @@ Twhite = '\033[1;37m'   # Branco
 VRCRM = '\033[0;0m'     # Remover
 
 import os
-def consulta():
+def consultar():
    if os.geteuid() != 0:                # If not root user...
       os.system(f'{Twhite}Você {Ired}NÃO POSSUI {Twhite}privilégios ROOT')
    
