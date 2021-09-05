@@ -81,6 +81,7 @@ $ python3 main.py
 
  <h2 align="center">📢 Help</h2>
  Este painel esta sendo disponibilizado 100% gratuitamente... As API não são fáceis de encontrar.
+ 
  Portanto se você (Dev) quiser contribuir para o painel se manter ativo, toda ajuda será bem vinda!
 
 <p>
