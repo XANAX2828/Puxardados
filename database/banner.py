@@ -22,30 +22,30 @@ def clear():
 clear()
 
 
-def menu():
+def menu1():
     clear()
-    print(fr'''{Ired}    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-    ┃                                                                  ┃
-    ┃   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  ┃
-    ┃    {Gpurple} /\\,/\\,     |\         -__ /\\                       ,,     {Ired}┃
-    ┃    {Gpurple}/| || ||   '   \\          ||  \\   _    '             ||     {Ired}┃
-    ┃    {Gpurple}|| || ||  \\  / \\        /||__||  < \, \\ \\/\\  _-_  ||     {Ired}┃
-    ┃    {Gpurple}||=|= ||  || || ||        \||__||  /-|| || || || || \\ ||     {Ired}┃
-    ┃   {Gpurple}~|| || ||  || || ||         ||  |, (( || || || || ||/   ||     {Ired}┃
-    ┃    {Gpurple}|, \\,\\, \\  \\/        _-||-_/   \/\\ \\ \\ \\ \\,/  \\ {Hcyan}2.0{Ired} ┃
-    ┃   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  ┃
-    ┃                                                                  ┃
-    ┗  ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓  ┛
-       ┃    {Nyellow}[{Dgreen} CONSULTAS {Nyellow}]{Ired}    ┃   {Nyellow}[{Iblue} FERRAMENTAS {Nyellow}]{Ired}   ┃   {Nyellow}[{Twhite} OPÇÕES {Nyellow}]{Ired}   ┃
-       ┃                     ┃                     ┃                ┃
-       ┣┫{Nyellow}[01]{Dgreen} Consulta CEP{Ired}   ┣┫{Nyellow}[05]{Iblue} Meu IP{Ired}         ┣┫{Nyellow}[08]{Twhite} Atualizar{Ired} ┃
-       ┃                     ┃                     ┃                ┃
-       ┣┫{Nyellow}[02]{Dgreen} Consulta CPF{Ired}   ┣┫{Nyellow}[06]{Iblue} Covid Info{Ired}     ┣┫{Nyellow}[09]{Twhite} Sair{Ired}      ┃
-       ┃                     ┃                     ┃                ┃
-       ┣┫{Nyellow}[03]{Dgreen} Consulta IP{Ired}    ┣┫{Nyellow}[07]{Iblue} Root Checker{Ired}   ┣┫{Nyellow}[10]{Twhite} Criador{Ired}   ┃
-       ┃                     ┃                     ┃                ┃
-       ┣┫{Nyellow}[04]{Dgreen} Consulta Placa{Ired} ┣┫                    ┣┫{Nyellow}[11]{Twhite} Grupo{Ired}     ┃
-       ┗━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━┛+
+    print(fr'''{Ired}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                  ┃
+┃   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  ┃
+┃    {Gpurple} /\\,/\\,     |\         -__ /\\                       ,,     {Ired}┃
+┃    {Gpurple}/| || ||   '   \\          ||  \\   _    '             ||     {Ired}┃
+┃    {Gpurple}|| || ||  \\  / \\        /||__||  < \, \\ \\/\\  _-_  ||     {Ired}┃
+┃    {Gpurple}||=|= ||  || || ||        \||__||  /-|| || || || || \\ ||     {Ired}┃
+┃   {Gpurple}~|| || ||  || || ||         ||  |, (( || || || || ||/   ||     {Ired}┃
+┃    {Gpurple}|, \\,\\, \\  \\/        _-||-_/   \/\\ \\ \\ \\ \\,/  \\ {Hcyan}2.0{Ired} ┃
+┃   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  ┃
+┃                                                                  ┃
+┗  ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓  ┛
+   ┃    {Nyellow}[{Dgreen} CONSULTAS {Nyellow}]{Ired}    ┃   {Nyellow}[{Iblue} FERRAMENTAS {Nyellow}]{Ired}   ┃   {Nyellow}[{Twhite} OPÇÕES {Nyellow}]{Ired}   ┃
+   ┃                     ┃                     ┃                ┃
+   ┣┫{Nyellow}[01]{Dgreen} Consulta CEP{Ired}   ┣┫{Nyellow}[05]{Iblue} Meu IP{Ired}         ┣┫{Nyellow}[08]{Twhite} Atualizar{Ired} ┃
+   ┃                     ┃                     ┃                ┃
+   ┣┫{Nyellow}[02]{Dgreen} Consulta CPF{Ired}   ┣┫{Nyellow}[06]{Iblue} Covid Info{Ired}     ┣┫{Nyellow}[09]{Twhite} Sair{Ired}      ┃
+   ┃                     ┃                     ┃                ┃
+   ┣┫{Nyellow}[03]{Dgreen} Consulta IP{Ired}    ┣┫{Nyellow}[07]{Iblue} Root Checker{Ired}   ┣┫{Nyellow}[10]{Twhite} Criador{Ired}   ┃
+   ┃                     ┃                     ┃                ┃
+   ┣┫{Nyellow}[04]{Dgreen} Consulta Placa{Ired} ┣┫                    ┣┫{Nyellow}[11]{Twhite} Grupo{Ired}     ┃
+   ┗━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━┛+
 
-    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛''')
-    
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛''')
+
