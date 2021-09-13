@@ -135,7 +135,7 @@ while Sair == False:
     elif opc == 7:   # Root Checker
         root.consultar()
     elif opc == 8:   # Atualizar painel
-        os.popen('cd data && bash update.sh');
+        os.popen('cd database && bash update.sh');
         dialog('Reiniciando o painel...');
         restart()
     elif opc == 9:   # Sair
