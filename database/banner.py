@@ -12,7 +12,6 @@ Twhite = '\033[1;37m'   # Branco
 VRCRM = '\033[0;0m'     # Remover
 
 import os
-import requests
 
 
 def clear():
