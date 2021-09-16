@@ -11,9 +11,9 @@
 
 
 <p align="center">
-  <a href="https://github.com/drmidnightytb/drmidnightytb">About Me</a> •
-  <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fdrmidnightytb">Follow Me :D</a> •
-  <a href="https://github.com/drmidnightytb">Author</a>
+  <a href="https://github.com/MidD3Vil/MidD3Vil">About Me</a> •
+  <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2FMidD3Vil">Follow Me :D</a> •
+  <a href="https://github.com/MidD3Vil">Author</a>
 </p>
 
 <h3><p align="center">Version: 2.0 Beta</p></h3>
@@ -52,27 +52,27 @@ Depois de baixar e instalar o python você pode baixar o **MidPainel** diretamen
 💻 Termux
 $ pkg upgrade -y && pkg update -y
 $ pkg install git python figlet -y
-$ git clone https://github.com/drmidnightytb/MidPainel
+$ git clone https://github.com/MidD3Vil/MidPainel
 $ cd MidPainel
 $ python3 main.py
 
 💻 Debian
 $ apt upgrade -y && apt update -y
 $ apt install git python figlet -y
-$ git clone https://github.com/drmidnightytb/MidPainel
+$ git clone https://github.com/MidD3Vil/MidPainel
 $ cd MidPainel
 $ python3 main.py
 
 💻Arch Linux
 $ pacman -Syyu git python figlet -y
-$ git clone https://github.com/drmidnightytb/MidPainel
+$ git clone https://github.com/MidD3Vil/MidPainel
 $ cd MidPainel
 $ python3 main.py
 
 
 💻OpenSUSE
 $ zypper install python git figlet -y
-$ git clone https://github.com/drmidnightytb/MidPainel
+$ git clone https://github.com/MidD3Vil/MidPainel
 $ cd MidPainel
 $ python3 main.py
 ```
